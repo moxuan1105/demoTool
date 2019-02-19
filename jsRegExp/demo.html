@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- <link rel="stylesheet" type="text/css" media="screen" href="main.css" /> -->
+    <!-- <script src="main.js"></script> -->
+    <script src="./jquery-3.3.1.js"></script>
+    <script src="./RegExp.js"></script>
+    <script>
+        /*
+ * @Author: moxuan 
+ * @Date: 2019-01-02 18:07:04 
+ * @Last Modified by: moxuan
+ * @Last Modified time: 2019-01-04 11:15:44
+ */
+        $(function(){
+            $('#a').click(function(){
+                var message = [];
+                console.log($('textarea').val().split("\n"));
+                var a = $('textarea').val().split("\n");
+                // var patt = /^\d+\.|^>|^[A-Z]\. [A-Z]|^- [A-Z]/;
+                // var patt1 = /^\d+\. [A-Z]|^[A-Z]\. [A-Z]|^- [A-Z]/;
+                // for(i = 0;i<a.length;i++){
+                //     console.log(patt.test(a[i]));                    
+                //     if(patt.test(a[i])){
+                //         // console.log("a");
+                //         if(!patt1.test(a[i])){
+                //             // console.log(a[i]+"不符合格式  数字. 首字母英文大写");
+                //             message.push(a[i]+"不符合格式  数字. 首字母英文大写");
+                //         }
+                //     }else{
+                        
+                //     }
+                // }
+                // console.log(a);
+                message = RegExp(a);
+
+                if('' != message ){
+                    errorMessage = message.join('\n');
+                    alert(errorMessage);
+                }
+                return false;
+            });
+        })
+    </script>
+</head>
+
+<body>
+    <textarea name="" id="" cols="30" rows="10"></textarea>
+    <input type="submit" value="" id="a">
+</body>
+</html>

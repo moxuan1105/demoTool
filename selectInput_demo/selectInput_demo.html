@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="./jquery-1.12.4.js"></script>
+    <script src="./setInputSel.js"></script>
+    <style>
+        .sel-inp-box {
+            position: relative;
+            top: 0;
+            left: 0;
+            display: inline-block;
+        }
+    </style>
+
+    <script>
+        $(function() {
+            /*测试值*/
+            var optionGroupData = [{
+                name: 'name1',
+                val: '12'
+            }, {
+                name: 'name2',
+                val: '13'
+            }, {
+                name: 'name3',
+                val: '14'
+            }];
+            var obj = {
+                    optionGroup: optionGroupData,
+                    parentId: 'dd'
+                }
+                /*调用*/
+            $.setInputSel(obj);
+        })
+    </script>
+</head>
+
+<body>
+    <form action="" method="GET">
+        <div id="dd"></div>
+        <br>
+        <br>
+        <input type="submit" value="提交">
+    </form>
+</body>
+
+</html>
+
+</html>
+
+</html>
+
+</html>
